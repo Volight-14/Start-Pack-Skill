@@ -8,4 +8,4 @@ FROM pg_depend
 JOIN pg_rewrite ON pg_depend.objid = pg_rewrite.oid
 JOIN pg_class obj_referencing ON pg_rewrite.ev_class = obj_referencing.oid
 JOIN pg_class obj_referenced ON pg_depend.refobjid = obj_referenced.oid
-WHERE obj_referenced.relname = 'view_master_transactions'; -- Замените на нужный объект
+WHERE obj_referenced.relname = 'YOUR_OBJECT_NAME'; -- ЗАМЕНИТЕ на название вашей вьюшки, таблицы или функции перед запуском
